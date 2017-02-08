@@ -1,4 +1,4 @@
-/* Empty. Add your own CSS if you like */
+/* Barra azul escuro utilizada em todo o app */
 .bar.bar-dark {
     border-color: #01579b;
     background-color: #01579b;
@@ -11,3 +11,16 @@
 .bar.bar-dark.bar-footer {
     background-image: linear-gradient(180deg, #e42112, #e42112 50%, transparent 50%);
 }
+
+/* Colocando os popup de acordo com a bar-dark */
+.popup-head {
+  background-color : #0277bd;
+}
+.popup-title{
+  color: white;
+}
+.popup-container .popup{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Botões azul */

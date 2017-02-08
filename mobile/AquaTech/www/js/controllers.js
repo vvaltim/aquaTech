@@ -1,10 +1,43 @@
 angular.module('app.controllers', [])
 
-.controller('dashboardCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('dashboardCtrl', ['$scope', '$stateParams', '$ionicPopup', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, $ionicPopup) {
+  $scope.buttonWaterLevel = function() {
+    $ionicPopup.alert({
+     title: 'Coming Soon',
+     template: 'Não há nada para ver aqui 💩'
+   });
+  }
 
+  $scope.buttonScheduleLighting = function() {
+    $ionicPopup.alert({
+     title: 'Coming Soon',
+     template: 'Não há nada para ver aqui 💩'
+   });
+  }
+
+  $scope.buttonScheduleFood = function() {
+    $ionicPopup.alert({
+     title: 'Coming Soon',
+     template: 'Não há nada para ver aqui 💩'
+   });
+  }
+
+  $scope.buttonAbout = function() {
+    $ionicPopup.alert({
+     title: 'Coming Soon',
+     template: '💃'
+   });
+  }
+
+  $scope.buttonExit = function() {
+    $ionicPopup.alert({
+     title: 'No!',
+     template: '😠'
+   });
+  }
 
 }])
 
