@@ -23,4 +23,11 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* Botões azul */
+/* Cards do menu */
+.button-menu-card {
+    margin:0 !important;
+    height: 31vh;
+    align-text:left;
+    padding-top:10px;
+    border-radius:0px !important;
+}
