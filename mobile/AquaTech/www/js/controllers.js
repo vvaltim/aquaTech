@@ -57,10 +57,18 @@ function ($scope, $stateParams, $http) {
       url: 'http://things.ubidots.com/api/v1.6/variables/586ef0cb76254252a2f27c42/values/?page_size=1&token=FTfg995ftCnXZOfLqmFwJ83UN3v6w0'
     }
   $http(requestVariable).then(function(data){
-    console.log(data);
-    console.log(data.data.results[0]);
+    //console.log(data);
+    //console.log(data.data.results[0]);
     $scope.temperature = data.data.results[0].value;
-    $scope.dataCreate = data.data.results[0].created_at;
+    //$scope.dataCreate = data.data.results[0].created_at;
+    var dataFormatada = new Date(data.data.results[0].created_at);
+    var dataFormatadaString = dataFormatada.toString();
+    //console.log(dataFormatada.toString());
+    var dividirData = dataFormatadaString.split(" ");
+    //console.log(dividirData[02] + "/" + dividirData[01] + "/" + dividirData[03] + " as " + dividirData[04]);
+    //console.log(dataFormatada);
+    $scope.dataCreate = dividirData[02] + "/" + dividirData[01] + "/" + dividirData[03] + " as " + dividirData[04];
+
   }, function(error){
     console.log(error);
   })
