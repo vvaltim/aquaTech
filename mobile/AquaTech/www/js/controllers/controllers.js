@@ -41,10 +41,13 @@ function ($scope, $stateParams, $ionicPopup) {
 
 }])
 
-.controller('temperatureCtrl', ['$scope', '$stateParams', '$http',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('temperatureCtrl', ['$scope', '$stateParams', '$http', '$ionicLoading', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $http) {
+function ($scope, $stateParams, $http, $ionicLoading) {
+    $ionicLoading.show({
+        template: '<ion-spinner class="spinner-positive"></ion-spinner>'
+    });
   $scope.temperature = "";
   $scope.dataCreate = "";
   /* Assim buga tudo */
@@ -68,6 +71,7 @@ function ($scope, $stateParams, $http) {
     //console.log(dividirData[02] + "/" + dividirData[01] + "/" + dividirData[03] + " as " + dividirData[04]);
     //console.log(dataFormatada);
     $scope.dataCreate = dividirData[02] + "/" + dividirData[01] + "/" + dividirData[03] + " as " + dividirData[04];
+    $ionicLoading.hide();
 
   }, function(error){
     console.log(error);

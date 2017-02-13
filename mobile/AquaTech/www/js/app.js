@@ -5,14 +5,21 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
+
+angular.module('app.controllers', []);
+angular.module('app.routes', []);
+angular.module('app.services', []);
+angular.module('app.directives', []);
+angular.module('app.factories', []);
+
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services','ngCordova'])
 
-.config(function($ionicConfigProvider, $sceDelegateProvider){
-
-
-  $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
-
-})
+// .config(function($ionicConfigProvider, $sceDelegateProvider){
+//
+//
+//   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
+//
+// })
 
 .run(function($ionicPlatform, $cordovaStatusbar) {
   $ionicPlatform.ready(function() {
@@ -26,9 +33,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
     //alteração da cor da statusBar
-    $cordovaStatusbar.styleHex('#01579b');
+    //$cordovaStatusbar.styleHex('#01579b');
   });
 })
 
