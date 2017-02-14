@@ -34,7 +34,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       StatusBar.styleDefault();
     }
     //alteração da cor da statusBar
-    //$cordovaStatusbar.styleHex('#01579b');
+    $cordovaStatusbar.styleHex('#01579b');
   });
 })
 
